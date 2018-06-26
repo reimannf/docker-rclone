@@ -39,6 +39,7 @@ $ docker run --rm -it -v $(pwd)/config:/config bcardiff/rclone
 
 A few environment variables allow you to customize the behavior of the sync:
 
+* `MODE` rclone mode like `sync`, `copy`, `check`, `cryptcheck`. Defaults to `sync`.
 * `SYNC_SRC` source location for `rclone sync` command
 * `SYNC_DEST` destination location for `rclone sync` command
 * `CRON` crontab schedule `0 0 * * *` to perform sync every midnight
@@ -52,4 +53,9 @@ A few environment variables allow you to customize the behavior of the sync:
 $ docker run --rm -it -v $(pwd)/config:/config -v /path/to/source:/source -e SYNC_SRC="/source" -e SYNC_DEST="dest:path" -e TZ="America/Argentina/Buenos_Aires" -e CRON="0 0 * * *" -e CRON_ABORT="0 6 * * *" -e FORCE_SYNC=1 -e CHECK_URL=https://hchk.io/hchk_uuid bcardiff/rclone
 ```
 
-See [rclone sync docs](https://rclone.org/commands/rclone_sync/) for source/dest syntax and additional options.
+See rclone documentation for source/dest syntax and additional options.
+
+* [rclone sync docs](https://rclone.org/commands/rclone_sync/)
+* [rclone copy docs](https://rclone.org/commands/rclone_copy/)
+* [rclone check docs](https://rclone.org/commands/rclone_check/)
+* [rclone cryptcheck docs](https://rclone.org/commands/rclone_cryptcheck/)
