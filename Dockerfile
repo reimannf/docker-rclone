@@ -4,6 +4,7 @@ MAINTAINER Brian J. Cardiff <bcardiff@gmail.com>
 
 ENV RCLONE_VERSION=current
 ENV ARCH=amd64
+ENV MODE=sync
 ENV SYNC_SRC=
 ENV SYNC_DEST=
 ENV SYNC_OPTS=-v
